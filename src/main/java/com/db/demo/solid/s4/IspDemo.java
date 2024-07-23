@@ -9,40 +9,63 @@ public class IspDemo {
 
 }
 
-
-interface Doable {
-	
-	public abstract void work();
-	public abstract void eat();
-	
+interface Workable {
+	void work();
 }
 
-class HumanBeing implements Doable {
+interface Eatable {
+	void eat();
+}
 
-	@Override
+class Robot implements Workable {
+	public void work() {
+
+	}
+}
+
+class Human implements Workable, Eatable {
 	public void work() {
 
 	}
 
-	@Override
 	public void eat() {
-
-	}	
-}
-
-class Robot implements Doable {
-
-	@Override
-	public void work() {
 
 	}
-
-	@Override
-	public void eat() {
-
-	}	
 }
 
-//class Robot2 extends HumanBeing{
-//
+//interface Doable {
+//	
+//	public abstract void work();
+//	public abstract void eat();
+//	
 //}
+//
+//class HumanBeing implements Doable {
+//
+//	@Override
+//	public void work() {
+//
+//	}
+//
+//	@Override
+//	public void eat() {
+//
+//	}	
+//}
+//
+//class Robot implements Doable {
+//
+//	@Override
+//	public void work() {
+//
+//	}
+//
+//	@Override
+//	public void eat() {
+//
+//	}	
+//}
+//
+////class Robot2 extends HumanBeing{
+////
+////}
