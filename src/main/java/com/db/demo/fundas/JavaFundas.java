@@ -13,7 +13,6 @@ public class JavaFundas {
 //		System.out.println(emp2.toString());
 //		System.out.println(emp2.getFirstName());
 		
-		
 		Employee emp1 = new Employee(101, "Sonu", 90000.50);
 		Employee emp2 = new Employee(101, "Sonu", 90000.50);
 
