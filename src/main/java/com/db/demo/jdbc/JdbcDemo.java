@@ -10,7 +10,7 @@ public class JdbcDemo {
 		String user = "System";
 		String password = "oracle";
 		String sql = "SELECT * FROM SYSTEM.EMPLOYEES";
-
+ 
 		Connection conn = null;
 		Statement stmt = null;
 		ResultSet rs = null;
