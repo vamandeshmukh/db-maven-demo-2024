@@ -9,11 +9,12 @@ public class DipDemo {
 
 	public static void main(String[] args) {
 
-		Printable printer1 = new Printer();
-		Printable printer2 = new Printer2();
+		Printable printer1 = new LaserPrinter();
+		Printable printer2 = new InkjetPrinter();
 
-		Computer obj = new Computer(printer2);
-		obj.printDocument("abc");
+		Computer obj = new Computer(printer1);
+		String document = "Text in the document...";
+		obj.printDocument(document);
 
 	}
 
@@ -43,17 +44,17 @@ interface Printable {
 	void print(String document);
 }
 
-class Printer implements Printable {
+class LaserPrinter implements Printable {
 
 	public void print(String document) {
-		System.out.println("Printing with printer 1 " + document);
+		System.out.println("Printing with Laser printer: " + document);
 	}
 }
 
-class Printer2 implements Printable {
+class InkjetPrinter implements Printable {
 
 	public void print(String document) {
-		System.out.println("Printing with printer 2 " + document);
+		System.out.println("Printing with Inkjet printer: " + document);
 	}
 }
 
@@ -68,14 +69,4 @@ class Computer {
 	public void printDocument(String document) {
 		printer.print(document);
 	}
-}
-
-class Implement {
-
-	public static void main(String[] args) {
-
-		Computer obj = new Computer(null);
-
-	}
-
 }
