@@ -1,5 +1,10 @@
 package com.db.demo.solid.s4;
 
+//Interface Segregation Principle (ISP)
+//Clients should not be forced to depend on interfaces they do not use.
+//Break down large interfaces into smaller, more specific ones.
+//Improves code modularity and reusability.
+
 public class IspDemo {
 
 }
