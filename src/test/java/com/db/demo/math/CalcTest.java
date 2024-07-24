@@ -3,27 +3,51 @@ package com.db.demo.math;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class CalcTest {
 	
-	
-	
+	private static Calc calc;
+
+	@BeforeAll
+	public static void setup() {
+		// things to be done before tests run begins 
+		calc = new Calc();
+	}
+
+	@AfterAll
+	public static void teardown() {
+		// things to be done after tests run ends
+		calc = null;
+	}
+
+	@BeforeEach
+	public void m1() {
+		// things to be done before a test run begins
+
+	}
+
+	@AfterEach
+	public void m2() {
+		// things to be done after a test run ends
+
+	}
 
 	@Test
 	public void testAddNums() {
-		Calc calc = new Calc();
 		assertEquals(10, calc.addNums(5, 5));
 	}
-	
+
 	@Test
 	public void testAddNums2() {
-		Calc calc = new Calc();
 		assertNotEquals(10, calc.addNums(5, 6));
 	}
 
 }
-
 
 //package com.db.demo.math;
 //
@@ -48,8 +72,6 @@ public class CalcTest {
 //		assertNotEquals(unexpected, actual);
 //	} 
 //}
-
-
 
 //package com.db.demo.math;
 //
