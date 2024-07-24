@@ -7,6 +7,10 @@ public class BridgeDemo {
 		Shape redCircle = new Circle(100, 100, 10, new RedCircle());
 
 		redCircle.draw();
+		
+		
+		String str = new String();
+		
 
 	}
 
