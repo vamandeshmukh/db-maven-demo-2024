@@ -5,18 +5,14 @@ interface DrawAPI {
 }
 
 class RedCircle implements DrawAPI {
+	
 	public void drawCircle(int radius, int x, int y) {
 		System.out.println("Drawing Circle[ color: red, radius: " + radius + ", x: " + x + ", y: " + y + "]");
 	}
 }
 
-class GreenCircle implements DrawAPI {
-	public void drawCircle(int radius, int x, int y) {
-		System.out.println("Drawing Circle[ color: green, radius: " + radius + ", x: " + x + ", y: " + y + "]");
-	}
-}
-
 abstract class Shape {
+
 	protected DrawAPI drawAPI;
 
 	protected Shape(DrawAPI drawAPI) {
@@ -27,6 +23,7 @@ abstract class Shape {
 }
 
 class Circle extends Shape {
+	
 	private int x, y, radius;
 
 	public Circle(int x, int y, int radius, DrawAPI drawAPI) {
