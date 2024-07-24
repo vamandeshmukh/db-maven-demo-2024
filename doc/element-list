@@ -1,0 +1,15 @@
+com.db.demo
+com.db.demo.despat
+com.db.demo.despat.behavioural.template
+com.db.demo.despat.creational.factory
+com.db.demo.despat.creational.singleton
+com.db.demo.despat.structural.bridge
+com.db.demo.doc
+com.db.demo.fundas
+com.db.demo.jdbc
+com.db.demo.solid
+com.db.demo.solid.s1
+com.db.demo.solid.s2
+com.db.demo.solid.s3
+com.db.demo.solid.s4
+com.db.demo.solid.s5
