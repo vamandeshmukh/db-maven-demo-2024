@@ -7,7 +7,12 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+
+//import org.junit.jupiter.
 
 public class CalcTest {
 	
@@ -46,6 +51,25 @@ public class CalcTest {
 	public void testAddNums2() {
 		assertNotEquals(10, calc.addNums(5, 6));
 	}
+
+	@Disabled
+	@Test
+	public void testsubNums() {
+		assertEquals(5, calc.subNums(10, 5));
+	}
+	
+	@Test
+	public void testsubNums2() {
+		assertNotEquals(10, calc.subNums(5, 6));
+	}
+	
+	@ParameterizedTest
+    @ValueSource(ints = { 10, 20, 30, 40, 50 })
+    public void testAddNums3(int num) {
+        Integer fixedValue = 5; 
+        Integer expectedResult = num + fixedValue;
+        assertEquals(expectedResult, calc.addNums(num, fixedValue));
+    }	
 
 }
 
